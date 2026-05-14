@@ -16,8 +16,8 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "git@github.com:airbnb/lottie-spm", .upToNextMinor(from: "4.4.0")),
-        .package(url: "git@github.com:facephi-clienters/SDK-CorePackage-SPM.git", .exactItem("2.7.0")),
-        .package(url: "git@github.com:facephi-clienters/FPHICaptureWidget-SPM.git", .exactItem("1.1.3"))
+        .package(url: "git@github.com:facephi-clienters/SDK-CorePackage-SPM.git", .exactItem("2.8.0")),
+        .package(url: "git@github.com:facephi-clienters/FPHICaptureWidget-SPM.git", .exactItem("1.2.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -27,10 +27,11 @@ let package = Package(
             dependencies: ["captureComponent",
                            "SDK-CorePackage-SPM",
                            .product(name: "Lottie", package: "lottie-spm"),
-                           "FPHICaptureWidget-SPM"],
+                           .product(name: "FPHICaptureWidget", package: "FPHICaptureWidget-SPM")
+                          ],
         ),
         .binaryTarget(name: "captureComponent",
-        url: "https://facephicorp.jfrog.io/artifactory/spm-pro-fphi/SDK/FPHISDKCaptureComponent/2.7.0/captureComponent.zip",
-        checksum: "74269d89fb216d25ad845bf2b16d2b225a786b21c04e6974ded4c0104495a411"),
+        url: "https://facephicorp.jfrog.io/artifactory/spm-pro-fphi/SDK/FPHISDKCaptureComponent/2.8.0/captureComponent.zip",
+        checksum: "ab6b814afe5a04d4f18f48ffc362710597e73df157744d71e1ac66fd01b48902"),
     ]
 )
