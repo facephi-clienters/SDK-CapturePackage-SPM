@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/facephi-clienters/SDK-CorePackage-SPM.git", .exactItem("2.11.0")),
+        .package(url: "https://github.com/facephi-clienters/SDK-CorePackage-SPM.git", .exactItem("2.12.0")),
         .package(url: "https://github.com/facephi-clienters/FPHICaptureWidget-SPM.git",  .exactItem("1.4.3"))
     ],
     targets: [
@@ -29,7 +29,7 @@ let package = Package(
                           ],
         ),
         .binaryTarget(name: "captureComponent",
-        url: "https://facephicorp.jfrog.io/artifactory/spm-pro-fphi/SDK/FPHISDKCaptureComponent/2.11.0/captureComponent.zip",
-        checksum: "e2f70acc07f0ffe9158045b662245dacec8411c651655da7971058f5d4ee5438"),
+        url: "https://facephicorp.jfrog.io/artifactory/spm-pro-fphi/SDK/FPHISDKCaptureComponent/2.12.0/captureComponent.zip",
+        checksum: "0124c89f0098ff083363bfe6babf16558f57c4d38ebd456fe161c019c43590cc"),
     ]
 )
